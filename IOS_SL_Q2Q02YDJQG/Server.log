@@ -1,0 +1,60 @@
+2024-12-13 08:17:20:296 [Appium] Welcome to Appium v2.11.2 (REV 1c98a33a376e5b35ebc801d0f7d6ba7b9eb118ac)
+2024-12-13 08:17:20:297 [Appium] Non-default server args:
+2024-12-13 08:17:20:298 [Appium] { address: '127.0.0.1', port: 48439, sessionOverride: true }
+2024-12-13 08:17:20:298 [Appium] The autodetected Appium home path: /Users/nachiyappan/.appium
+2024-12-13 08:17:20:299 [Appium] Attempting to load driver xcuitest...
+2024-12-13 08:17:20:300 [Appium] Requiring driver at /Users/nachiyappan/.appium/node_modules/appium-xcuitest-driver/build/index.js
+2024-12-13 08:17:20:496 [Appium] XCUITestDriver has been successfully loaded in 0.197s
+2024-12-13 08:17:20:506 [Appium] Appium REST http interface listener started on http://127.0.0.1:48439
+2024-12-13 08:17:20:506 [Appium] Available drivers:
+2024-12-13 08:17:20:506 [Appium]   - xcuitest@7.32.0 (automationName 'XCUITest')
+2024-12-13 08:17:20:507 [Appium] No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.
+2024-12-13 08:17:20:699 [HTTP] --> GET /status {}
+2024-12-13 08:17:20:700 [AppiumDriver@26de] Calling AppiumDriver.getStatus() with args: []
+2024-12-13 08:17:20:702 [AppiumDriver@26de] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.11.2","git-sha":"1c98a33a376e5b35ebc801d0f7d6ba7b9eb118ac","built":"2024-07-07 18:12:43 -0700"}}
+2024-12-13 08:17:20:705 [HTTP] <-- GET /status 200 5 ms - 200 
+2024-12-13 08:17:20:707 [HTTP] --> GET /status {}
+2024-12-13 08:17:20:707 [AppiumDriver@26de] Calling AppiumDriver.getStatus() with args: []
+2024-12-13 08:17:20:708 [AppiumDriver@26de] Responding to client with driver.getStatus() result: {"ready":true,"message":"The server is ready to accept new connections","build":{"version":"2.11.2","git-sha":"1c98a33a376e5b35ebc801d0f7d6ba7b9eb118ac","built":"2024-07-07 18:12:43 -0700"}}
+2024-12-13 08:17:20:708 [HTTP] <-- GET /status 200 1 ms - 200 
+2024-12-13 08:17:20:722 [HTTP] Request idempotency key: a1c0715d-e999-4c1c-8cd0-bf1dab92844b
+2024-12-13 08:17:20:728 [HTTP] --> POST /session {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:automationName":"XCUITest","appium:deviceName":"SL_Q2Q02YDJQG","appium:platformVersion":"18.1.1","appium:udid":"00008110-0016056A1AFA201E","appium:xcodeSigningId":"Apple Development","platformName":"IOS"}}}
+2024-12-13 08:17:20:728 [AppiumDriver@26de] Calling AppiumDriver.createSession() with args: [null,null,{"firstMatch":[{}],"alwaysMatch":{"appium:automationName":"XCUITest","appium:deviceName":"SL_Q2Q02YDJQG","appium:platformVersion":"18.1.1","appium:udid":"00008110-0016056A1AFA201E","appium:xcodeSigningId":"Apple Development","platformName":"IOS"}}]
+2024-12-13 08:17:20:728 [AppiumDriver@26de] Event 'newSessionRequested' logged at 1734077840728 (13:47:20 GMT+0530 (India Standard Time))
+2024-12-13 08:17:20:730 [Appium] Attempting to find matching driver for automationName 'XCUITest' and platformName 'IOS'
+2024-12-13 08:17:20:730 [Appium] The 'xcuitest' driver was installed and matched caps.
+2024-12-13 08:17:20:730 [Appium] Will require it at /Users/nachiyappan/.appium/node_modules/appium-xcuitest-driver
+2024-12-13 08:17:20:731 [Appium] Requiring driver at /Users/nachiyappan/.appium/node_modules/appium-xcuitest-driver/build/index.js
+2024-12-13 08:17:20:731 [AppiumDriver@26de] Appium v2.11.2 creating new XCUITestDriver (v7.32.0) session
+2024-12-13 08:17:20:731 [AppiumDriver@26de] Checking BaseDriver versions for Appium and XCUITestDriver
+2024-12-13 08:17:20:731 [AppiumDriver@26de] Appium's BaseDriver version is 9.11.2
+2024-12-13 08:17:20:731 [AppiumDriver@26de] XCUITestDriver's BaseDriver version is 9.11.2
+2024-12-13 08:17:20:731 [AppiumDriver@26de] There are no active sessions for cleanup
+2024-12-13 08:17:20:733 [XCUITestDriver@1b5d] undefined
+2024-12-13 08:17:20:733 [XCUITestDriver@1b5d] Creating session with W3C capabilities: {
+  "alwaysMatch": {
+    "platformName": "IOS",
+    "appium:automationName": "XCUITest",
+    "appium:deviceName": "SL_Q2Q02YDJQG",
+    "appium:platformVersion": "18.1.1",
+    "appium:udid": "00008110-0016056A1AFA201E",
+    "appium:xcodeSigningId": "Apple Development"
+  },
+  "firstMatch": [
+    {}
+  ]
+}
+2024-12-13 08:17:20:737 [XCUITestDriver@1b5d] The desired capabilities include neither an app nor a bundleId. WebDriverAgent will be started without the default app
+2024-12-13 08:17:20:737 [d39d2d35][XCUITestDriver@1b5d] Session created with session id: d39d2d35-2840-4d14-a422-fbb1c583ffb1
+2024-12-13 08:17:20:753 [d39d2d35][XCUITest] Current user: 'nachiyappan'
+2024-12-13 08:17:20:759 [d39d2d35][XCUITestDriver@1b5d] Available real devices: 
+2024-12-13 08:17:20:890 [d39d2d35][XCUITestDriver@1b5d] {}
+2024-12-13 08:17:20:891 [d39d2d35][DevCon Factory] Releasing connections for 00008110-0016056A1AFA201E device on any port number
+2024-12-13 08:17:20:891 [d39d2d35][DevCon Factory] No cached connections have been found
+2024-12-13 08:17:20:891 [d39d2d35][AppiumDriver@26de] Event 'newSessionStarted' logged at 1734077840891 (13:47:20 GMT+0530 (India Standard Time))
+2024-12-13 08:17:20:904 [d39d2d35][AppiumDriver@26de] Encountered internal error running command: Error: Unknown device or simulator UDID: '00008110-0016056A1AFA201E'
+    at XCUITestDriver.determineDevice (/Users/nachiyappan/.appium/node_modules/appium-xcuitest-driver/lib/driver.js:1150:21)
+    at XCUITestDriver.start (/Users/nachiyappan/.appium/node_modules/appium-xcuitest-driver/lib/driver.js:502:40)
+    at XCUITestDriver.createSession (/Users/nachiyappan/.appium/node_modules/appium-xcuitest-driver/lib/driver.js:427:7)
+    at AppiumDriver.createSession (/opt/homebrew/lib/node_modules/appium/lib/appium.js:731:35)
+2024-12-13 08:17:20:908 [d39d2d35][HTTP] <-- POST /session 500 180 ms - 628 

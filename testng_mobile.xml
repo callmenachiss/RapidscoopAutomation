@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SiteManager Regression">
+
+    <test name = "LoginPage">
+        <parameter name="cucumber.features" value="src/test/resources/MobileFeatures/Login.feature"/>
+        <classes>
+            <class name="com.qa.runners.MobileRunner"></class>
+        </classes>
+    </test>
+
+
+</suite>

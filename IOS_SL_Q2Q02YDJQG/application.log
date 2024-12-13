@@ -1,0 +1,7 @@
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-13 10:21:34.011 PropertyManager:19 - Loading config properties
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-13 10:21:34.032 CapabilitiesManager:17 - getting capabilities
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-13 10:21:34.034 ServerManager:25 - starting appium server
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-13 10:21:36.784 ServerManager:34 - Appium server started
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-13 10:21:36.785 DriverManager:77 - initializing Appium driver
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-13 10:21:41.650 CapabilitiesManager:17 - getting capabilities
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-13 10:21:41.650 ServerManager:25 - starting appium server

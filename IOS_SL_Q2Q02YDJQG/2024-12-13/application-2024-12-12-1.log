@@ -1,0 +1,13 @@
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-12 14:56:14.108 PropertyManager:19 - Loading config properties
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-12 14:56:14.129 CapabilitiesManager:17 - getting capabilities
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-12 14:56:14.132 ServerManager:25 - starting appium server
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-12 14:56:17.058 ServerManager:34 - Appium server started
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-12 14:56:17.059 DriverManager:77 - initializing Appium driver
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-12 14:57:07.376 DriverManager:79 - Driver is initialized
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-12 14:57:07.622 DriverManager:130 - App already installed, Launching App in the device
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-12 14:57:10.628 DriverManager:134 - App Launched Successfully in the device
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-12 14:57:42.487 EVATasksPage:241 - No Existing login detected. Starting to login from first
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-12 14:57:52.706 EVATasksPage:252 - No Existing login detected. Starting to login from first
+[IOS_SL_Q2Q02YDJQG ERROR] 2024-12-12 14:58:19.548 BasePage:105 - WebElement is not displayed. Can't locate an element by this strategy: By.chained({AppiumBy.iOSClassChain: **/XCUIElementTypeButton[`name == "Skip"`]})
+[IOS_SL_Q2Q02YDJQG ERROR] 2024-12-12 14:58:29.643 BasePage:105 - WebElement is not displayed. Can't locate an element by this strategy: By.chained({AppiumBy.iOSClassChain: **/XCUIElementTypeStaticText[`name == "Basket"`]})
+[IOS_SL_Q2Q02YDJQG INFO ] 2024-12-12 14:58:31.038 LoginCheckOutPage:158 - Verifying LabelText inorder to click on SSO Button

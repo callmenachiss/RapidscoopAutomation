@@ -1,0 +1,162 @@
+package com.qa.webpageLocators;
+
+
+import com.beust.ah.A;
+import com.qa.config.DriverManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+
+
+public class BaseWebPage extends  DriverManager{
+
+    private static final Logger LOGGER = LogManager.getLogger(BaseWebPage.class);
+
+    public  void teardown() {
+        driver.quit();
+    }
+
+    public String getUrlofCurrentPage(){
+        String url=driver.getCurrentUrl();
+        return url;
+    }
+
+    public void handleWindow(int position){
+        Set<String> allwindows = driver.getWindowHandles();
+        List<String> targetWindow = new ArrayList<String>(allwindows);
+        driver.switchTo().window(targetWindow.get(position));
+    }
+
+    public void Close(){
+        driver.close();
+    }
+
+    public void pageRefresh(){
+        driver.navigate().refresh();
+    }
+
+        public WebElement waitforelement(WebElement ele) {
+            WebElement element=wait.until(ExpectedConditions.elementToBeClickable(ele));
+            return element;
+        }
+
+    public WebElement waitforelement(WebElement ele,long time) {
+        WebElement element=wait.until(ExpectedConditions.elementToBeClickable(ele));
+        return element;
+    }
+
+        public void click(WebElement ele){
+            WebElement element = waitforelement(ele);
+            element.click();
+        }
+
+    public void click(WebElement ele,long time){
+        WebElement element = waitforelement(ele,time);
+        element.click();
+    }
+
+        public void type(WebElement ele,String data) {
+            WebElement element = waitforelement(ele);
+            element.sendKeys(data);
+        }
+
+
+    public void js_click(WebElement ele){
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", ele);
+    }
+
+
+    public void type(WebElement ele,String data,long time) {
+        WebElement element = waitforelement(ele,time);
+        element.sendKeys(data);
+    }
+
+    public void switchFrame(WebElement element) {
+        waitforelement(element);
+        driver.switchTo().frame(element);
+    }
+
+    public void switchParentFrame() {
+        driver.switchTo().defaultContent();
+    }
+
+
+       public String getText(WebElement ele) {
+        WebElement element = waitforelement(ele);
+        String text=element.getText();
+        //System.out.println(text);
+        return text;
+       }
+
+        public void selectValue(WebElement ele, String value) {
+            WebElement element = waitforelement(ele);
+            new Select(element).selectByValue(value);
+        }
+
+        public void selectText(WebElement ele, String text) {
+            WebElement element = waitforelement(ele);
+            new Select(element).selectByVisibleText(text);
+        }
+
+        public void selectIndex(WebElement ele, int position) {
+            WebElement element = waitforelement(ele);
+            new Select(element).selectByIndex(position);
+        }
+
+
+        public void pressEnter() throws InterruptedException {
+         Thread.sleep(2000);
+         Actions act = new Actions(driver);
+         act.sendKeys(Keys.ENTER).build().perform();
+        }
+
+        public void pressTab() throws InterruptedException {
+        Thread.sleep(2000);
+        Actions act = new Actions(driver);
+        act.sendKeys(Keys.TAB).build().perform();
+        }
+
+        public int generateRandomNumber(){
+            Random random = new Random();
+            int x = random.nextInt(9);
+            return x;
+        }
+
+    public boolean isDisplayed(WebElement element) {
+        try {
+            return element != null && element.isDisplayed();
+        } catch (Exception e) {
+            if (e instanceof StaleElementReferenceException) {
+                throw e;
+            }
+            LOGGER.error("WebElement is not displayed. " + e.getLocalizedMessage());
+            return false;
+        }
+    }
+
+        public  String getCurrentTime() {
+        DateFormat customFormat =new SimpleDateFormat("ddMMyyyyHHmmss");
+        Date currentDate = new Date();
+        return customFormat.format(currentDate);
+        }
+
+        public static int genarateFiveNumbers()
+        {
+        Random r = new Random( System.currentTimeMillis() );
+        return ((1 + r.nextInt(2)) * 10000 + r.nextInt(10000));
+        }
+
+
+    }
