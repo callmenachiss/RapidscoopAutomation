@@ -123,7 +123,11 @@ public class BaseWebPage extends  DriverManager{
         }
 
         public void forcedSleep() throws InterruptedException {
-        Thread.sleep(4000);
+        Thread.sleep(6000);
+        }
+
+        public void minSleep() throws InterruptedException {
+        Thread.sleep(2000);
         }
 
         public void pressTab() throws InterruptedException {

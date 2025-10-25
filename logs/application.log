@@ -44,3 +44,20 @@
 [logs INFO ] 2025-10-25 12:49:09.580 DriverManager:105 - maximize the screen for better visibility
 [logs INFO ] 2025-10-25 12:49:32.626 DriverManager:96 - initializing Web driver
 [logs INFO ] 2025-10-25 12:49:36.900 DriverManager:96 - initializing Web driver
+[logs INFO ] 2025-10-25 12:52:18.138 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-25 12:52:18.179 DriverManager:96 - initializing Web driver
+[logs INFO ] 2025-10-25 12:52:24.003 DriverManager:103 - Navigate into Rapiscoop Web Application
+[logs INFO ] 2025-10-25 12:52:24.163 DriverManager:105 - maximize the screen for better visibility
+[logs INFO ] 2025-10-25 12:52:44.988 DriverManager:96 - initializing Web driver
+[logs INFO ] 2025-10-25 12:52:48.489 DriverManager:103 - Navigate into Rapiscoop Web Application
+[logs INFO ] 2025-10-25 12:52:48.684 DriverManager:105 - maximize the screen for better visibility
+[logs INFO ] 2025-10-25 12:53:01.237 DriverManager:96 - initializing Web driver
+[logs INFO ] 2025-10-25 12:53:04.752 DriverManager:103 - Navigate into Rapiscoop Web Application
+[logs INFO ] 2025-10-25 12:53:04.875 DriverManager:105 - maximize the screen for better visibility
+[logs INFO ] 2025-10-25 12:55:57.530 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-25 12:55:57.574 DriverManager:96 - initializing Web driver
+[logs INFO ] 2025-10-25 12:56:03.456 DriverManager:103 - Navigate into Rapiscoop Web Application
+[logs INFO ] 2025-10-25 12:56:03.598 DriverManager:105 - maximize the screen for better visibility
+[logs INFO ] 2025-10-25 12:56:22.089 DriverManager:96 - initializing Web driver
+[logs INFO ] 2025-10-25 12:56:25.669 DriverManager:103 - Navigate into Rapiscoop Web Application
+[logs INFO ] 2025-10-25 12:56:25.854 DriverManager:105 - maximize the screen for better visibility

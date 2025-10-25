@@ -29,6 +29,7 @@ public class LoginpageStepDef extends BaseWebPage {
     @Given("Create a instant post for twitter")
     public void Create_a_instant_post_for_twitter() throws InterruptedException {
         loginPage = new LoginWebPage(driver);
+        minSleep();
         loginPage.createInstantPostTwitter();
         forcedSleep();
     }
@@ -36,6 +37,7 @@ public class LoginpageStepDef extends BaseWebPage {
     @Given("Create a instant post for linkedin")
     public void Create_a_instant_post_for_linkedin() throws InterruptedException {
         loginPage = new LoginWebPage(driver);
+        minSleep();
         loginPage.createInstantPostLinkedin();
         forcedSleep();
     }
@@ -43,6 +45,7 @@ public class LoginpageStepDef extends BaseWebPage {
     @Given("Create a schedule post for twitter")
     public void Create_a_schedule_post_for_twitter() throws InterruptedException {
         loginPage = new LoginWebPage(driver);
+        minSleep();
         loginPage.createSchedulePostTwitter();
         forcedSleep();
     }
@@ -50,6 +53,7 @@ public class LoginpageStepDef extends BaseWebPage {
     @Given("Create a schedule post for linkedin")
     public void Create_a_schedule_post_for_linkedin() throws InterruptedException {
         loginPage = new LoginWebPage(driver);
+        minSleep();
         loginPage.createSchedulePostLinkedin();
         forcedSleep();
     }
@@ -57,6 +61,7 @@ public class LoginpageStepDef extends BaseWebPage {
     @Given("Create instant post in twitter and linkedin")
     public void Create_instant_post_in_twitter_and_linkedin() throws InterruptedException {
         loginPage = new LoginWebPage(driver);
+        minSleep();
         loginPage.createInstantPostLinkedinandTwitter();
         forcedSleep();
     }
@@ -64,6 +69,7 @@ public class LoginpageStepDef extends BaseWebPage {
     @Given("Create schedule post in twitter and linkedin")
     public void Create_schedule_post_in_twitter_and_linkedin() throws InterruptedException {
         loginPage = new LoginWebPage(driver);
+        minSleep();
         loginPage.createSchedulePostLinkedinandTwitter();
         forcedSleep();
     }
