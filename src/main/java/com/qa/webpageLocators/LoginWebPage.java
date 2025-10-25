@@ -61,7 +61,7 @@ public class LoginWebPage extends BaseWebPage{
     //button[normalize-space(text())='Today']
     @FindBy(xpath = "//button[normalize-space(text())='Today']")
     private WebElement TodayButton;
-    @FindBy(xpath = "//button[normalize-space(text())='5:00 PM']")
+    @FindBy(xpath = "//button[normalize-space(text())='7:00 PM']")
     private WebElement ScheduleTime;
     @FindBy(xpath = "(//button[normalize-space(text())='Schedule Post'])[2]")
     private WebElement SchedulePostButton;

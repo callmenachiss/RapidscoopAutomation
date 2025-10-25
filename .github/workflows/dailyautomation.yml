@@ -36,9 +36,9 @@ jobs:
 
       # Step 4: Run Automation Tests using testng.xml
       - name: Run Automation Tests
-        run: mvn clean test -D suiteXmlFile=testng.xml
+        run: mvn clean test -DsuiteXmlFile=testng.xml
 
-      # Step 5: Upload TestNG and Extent Reports (optional for record)
+      # Step 5: Upload TestNG and Extent Reports
       - name: Upload Test Reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -49,7 +49,7 @@ jobs:
             target/extent-reports/
           if-no-files-found: ignore
 
-      # Step 6: Send Email with Report (always triggers)
+      # Step 6: Send Email with Report and GitHub link
       - name: Send Test Report Email
         if: always()
         uses: dawidd6/action-send-mail@v3
@@ -58,22 +58,29 @@ jobs:
           server_port: 465
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "🚀 Daily Automation Report - ${{ github.run_id }}"
+          subject: "🚀 Daily Automation Report - Run #${{ github.run_number }}"
           to: nachiyappan7777@gmail.com
           from: "GitHub CI <${{ secrets.EMAIL_USERNAME }}>"
           body: |
             Hi Nachiyappan 👋,
 
-            The daily automation run has completed for *RapidscoopAutomation*.
+            The daily automation run for *RapidscoopAutomation* has been completed.
 
-            Repository: https://github.com/callmenachiss/RapidscoopAutomation  
-            Execution Time: 1:45 PM IST (Scheduled)  
-            Status: ${{ job.status }}
+            🕐 **Execution Details**
+            • Repository: [RapidscoopAutomation](${{ github.server_url }}/${{ github.repository }})
+            • Workflow Run: [View on GitHub Actions](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+            • Status: **${{ job.status }}**
+            • Execution Time: 1:45 PM IST (Scheduled)
 
-            Please find attached the latest TestNG and Extent reports for review.
+            📊 **Extent Report**
+            You can view or download the detailed Extent Report here:
+            👉 [Extent Report (GitHub Artifact)](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
 
+            The latest TestNG and Extent reports are also attached below for your convenience.
+
+            ---
             Regards,  
-            QA Team 🤖
+            QA Automation Bot 🤖
           attachments: |
             test-output/emailable-report.html
             target/extent-reports/index.html

@@ -141,3 +141,7 @@
 [logs INFO ] 2025-10-25 17:23:04.069 DriverManager:97 - initializing Web driver
 [logs INFO ] 2025-10-25 17:23:16.470 DriverManager:125 - Navigated to Rapidscoop Web Application
 [logs INFO ] 2025-10-25 17:23:16.497 DriverManager:131 - WebDriver setup completed successfully
+[logs INFO ] 2025-10-25 17:49:57.238 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-25 17:49:57.536 DriverManager:97 - initializing Web driver
+[logs INFO ] 2025-10-25 17:50:05.910 DriverManager:125 - Navigated to Rapidscoop Web Application
+[logs INFO ] 2025-10-25 17:50:05.929 DriverManager:131 - WebDriver setup completed successfully
