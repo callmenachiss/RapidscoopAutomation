@@ -110,7 +110,7 @@ jobs:
 
             ---
             Regards,  
-            QA Automation Bot 🤖
+            QA Automation  Bot 🤖
           attachments: |
             test-output/emailable-report.html
             target/extent-reports/index.html
