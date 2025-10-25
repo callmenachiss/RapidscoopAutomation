@@ -33,7 +33,7 @@ jobs:
 
       # Step 4: Run Automation Tests using testng.xml
       - name: Run Automation Tests
-        run: mvn clean test -DsuiteXmlFile=testng.xml
+        run: mvn clean test -DsuiteXmlFile=./testng.xml
 
       # Step 5: Upload TestNG and Extent Reports (optional for record)
       - name: Upload Test Reports
@@ -56,7 +56,7 @@ jobs:
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "🚀 Daily Automation Report - ${{ github.run_id }}"
-          to: nachiyappanworks@gmail.com
+          to: nachiyappan7777@gmail.com
           from: "GitHub CI <${{ secrets.EMAIL_USERNAME }}>"
           body: |
             Hi Nachiyappan 👋,
