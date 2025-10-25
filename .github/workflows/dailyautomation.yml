@@ -36,9 +36,35 @@ jobs:
 
       # Step 4: Run Automation Tests using testng.xml
       - name: Run Automation Tests
-        run: mvn clean test -DsuiteXmlFile=testng.xml
+        run: mvn clean test -D suiteXmlFile=testng.xml
 
-      # Step 5: Upload TestNG and Extent Reports
+      # Step 5: Extract Pass/Fail/Skip counts from TestNG results
+      - name: Parse TestNG Results Summary
+        if: always()
+        id: test_summary
+        run: |
+          results_file="test-output/testng-results.xml"
+
+          if [ -f "$results_file" ]; then
+            passed=$(xmllint --xpath "string(/testng-results/@passed)" $results_file 2>/dev/null || echo "0")
+            failed=$(xmllint --xpath "string(/testng-results/@failed)" $results_file 2>/dev/null || echo "0")
+            skipped=$(xmllint --xpath "string(/testng-results/@skipped)" $results_file 2>/dev/null || echo "0")
+
+            echo "✅ Passed: $passed"
+            echo "❌ Failed: $failed"
+            echo "⚠️ Skipped: $skipped"
+
+            echo "passed=$passed" >> $GITHUB_OUTPUT
+            echo "failed=$failed" >> $GITHUB_OUTPUT
+            echo "skipped=$skipped" >> $GITHUB_OUTPUT
+          else
+            echo "⚠️ testng-results.xml not found!"
+            echo "passed=0" >> $GITHUB_OUTPUT
+            echo "failed=0" >> $GITHUB_OUTPUT
+            echo "skipped=0" >> $GITHUB_OUTPUT
+          fi
+
+      # Step 6: Upload TestNG and Extent Reports
       - name: Upload Test Reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -49,7 +75,7 @@ jobs:
             target/extent-reports/
           if-no-files-found: ignore
 
-      # Step 6: Send Email with Report and GitHub link
+      # Step 7: Send Email with Report, Summary, and GitHub link
       - name: Send Test Report Email
         if: always()
         uses: dawidd6/action-send-mail@v3
@@ -72,9 +98,13 @@ jobs:
             • Status: **${{ job.status }}**
             • Execution Time: 1:45 PM IST (Scheduled)
 
+            ✅ **Test Summary**
+            • Passed: ${{ steps.test_summary.outputs.passed }}
+            • Failed: ${{ steps.test_summary.outputs.failed }}
+            • Skipped: ${{ steps.test_summary.outputs.skipped }}
+
             📊 **Extent Report**
-            You can view or download the detailed Extent Report here:
-            👉 [Extent Report (GitHub Artifact)](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+            👉 [Click here to view on GitHub Actions](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
 
             The latest TestNG and Extent reports are also attached below for your convenience.
 
