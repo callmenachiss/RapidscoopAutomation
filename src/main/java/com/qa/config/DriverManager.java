@@ -94,6 +94,46 @@ public class DriverManager {
     //web-init
     public void LaunchWebApp() {
         LOGGER.info("initializing Web driver");
+
+        ChromeOptions options = new ChromeOptions();
+        // Detect if running in CI (GitHub Actions)
+        boolean isCi = System.getenv("CI") != null;
+
+        if (isCi) {
+            // CI environment (Linux)
+            options.addArguments("--headless=new");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--user-data-dir=/tmp/chrome-profile-" + System.currentTimeMillis());
+        } else {
+            // Local environment (Windows/Mac)
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--headless=new");  // optional: remove if you want GUI locally
+            options.addArguments("--disable-gpu");   // required for Windows headless
+        }
+
+        // Initialize driver AFTER setting all options
+        driver = new ChromeDriver(options);
+        driver.manage().deleteAllCookies();
+
+        // Navigate to target URL
+        hitTargetUrl();  // your existing method
+
+        LOGGER.info("Navigated to Rapidscoop Web Application");
+
+        // Set implicit and explicit waits
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+        LOGGER.info("WebDriver setup completed successfully");
+    }
+
+
+
+    /*
+    public void LaunchWebApp() {
+        LOGGER.info("initializing Web driver");
         //ChromeOptions options = new ChromeOptions();
         //options.addArguments("--incognito");
         //driver = new ChromeDriver(options);
@@ -106,8 +146,7 @@ public class DriverManager {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
-
-
+    */
 
 
     public void tearDown(){
