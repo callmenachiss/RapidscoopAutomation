@@ -2,6 +2,7 @@ package com.qa.config;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.ios.IOSDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
@@ -95,7 +96,8 @@ public class DriverManager {
     public void LaunchWebApp() {
         LOGGER.info("initializing Web driver");
 
-        ChromeOptions options = new ChromeOptions();
+        WebDriverManager.chromedriver().setup();
+         ChromeOptions options = new ChromeOptions();
         // Detect if running in CI (GitHub Actions)
         boolean isCi = System.getenv("CI") != null;
 
