@@ -69,3 +69,8 @@
 [logs INFO ] 2025-10-25 15:42:51.924 PropertyManager:19 - Loading config properties
 [logs INFO ] 2025-10-25 15:42:51.994 DriverManager:96 - initializing Web driver
 [logs INFO ] 2025-10-25 15:43:10.418 DriverManager:96 - initializing Web driver
+[logs INFO ] 2025-10-25 15:45:23.349 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-25 15:45:23.416 DriverManager:96 - initializing Web driver
+[logs INFO ] 2025-10-25 15:45:30.618 DriverManager:103 - Navigate into Rapiscoop Web Application
+[logs INFO ] 2025-10-25 15:45:30.886 DriverManager:105 - maximize the screen for better visibility
+[logs INFO ] 2025-10-25 15:45:35.513 DriverManager:96 - initializing Web driver

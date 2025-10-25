@@ -1,6 +1,9 @@
 name: Daily Automation Run
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     # Runs every day at 1:45 PM IST (08:15 UTC)
     - cron: "15 8 * * *"
