@@ -122,6 +122,10 @@ public class BaseWebPage extends  DriverManager{
          act.sendKeys(Keys.ENTER).build().perform();
         }
 
+        public void forcedSleep() throws InterruptedException {
+        Thread.sleep(4000);
+        }
+
         public void pressTab() throws InterruptedException {
         Thread.sleep(2000);
         Actions act = new Actions(driver);

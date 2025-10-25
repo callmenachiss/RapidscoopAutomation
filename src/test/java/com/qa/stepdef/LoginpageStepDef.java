@@ -14,15 +14,58 @@ public class LoginpageStepDef extends BaseWebPage {
     private SmartSupportPage smartSupportPage;
 
 
-    @Given("I login into iEnterprise Web Application")
-    public void I_login_into_iEnterprise_Web_Application() throws InterruptedException {
+    @Given("User login into Rapidscoop Web Application")
+    public void User_login_into_Rapidscoop_Web_Application() throws InterruptedException {
         LaunchWebApp();
         loginPage = new LoginWebPage(driver);
-        homePage = new HomeWebPage(driver);
-        smartSupportPage = new SmartSupportPage(driver);
+        //homePage = new HomeWebPage(driver);
+        //smartSupportPage = new SmartSupportPage(driver);
         loginPage.performLogin();
-        homePage.clickOnSmartSupportMenu();
-        smartSupportPage.verifySmartSupportMenu();
+        //homePage.clickOnSmartSupportMenu();
+        //smartSupportPage.verifySmartSupportMenu();
+    }
+
+
+    @Given("Create a instant post for twitter")
+    public void Create_a_instant_post_for_twitter() throws InterruptedException {
+        loginPage = new LoginWebPage(driver);
+        loginPage.createInstantPostTwitter();
+        forcedSleep();
+    }
+
+    @Given("Create a instant post for linkedin")
+    public void Create_a_instant_post_for_linkedin() throws InterruptedException {
+        loginPage = new LoginWebPage(driver);
+        loginPage.createInstantPostLinkedin();
+        forcedSleep();
+    }
+
+    @Given("Create a schedule post for twitter")
+    public void Create_a_schedule_post_for_twitter() throws InterruptedException {
+        loginPage = new LoginWebPage(driver);
+        loginPage.createSchedulePostTwitter();
+        forcedSleep();
+    }
+
+    @Given("Create a schedule post for linkedin")
+    public void Create_a_schedule_post_for_linkedin() throws InterruptedException {
+        loginPage = new LoginWebPage(driver);
+        loginPage.createSchedulePostLinkedin();
+        forcedSleep();
+    }
+
+    @Given("Create instant post in twitter and linkedin")
+    public void Create_instant_post_in_twitter_and_linkedin() throws InterruptedException {
+        loginPage = new LoginWebPage(driver);
+        loginPage.createInstantPostLinkedinandTwitter();
+        forcedSleep();
+    }
+
+    @Given("Create schedule post in twitter and linkedin")
+    public void Create_schedule_post_in_twitter_and_linkedin() throws InterruptedException {
+        loginPage = new LoginWebPage(driver);
+        loginPage.createSchedulePostLinkedinandTwitter();
+        forcedSleep();
     }
 
     @Then("I close my web browser")

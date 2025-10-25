@@ -34,18 +34,120 @@ public class LoginWebPage extends BaseWebPage{
     private WebElement signInTxt;
 
 
+    @FindBy(xpath = "//span[text()='RapidScoop.co']")
+    private WebElement RapiscoopTxt;
+    @FindBy(name = "email")
+    private WebElement emailfield;
+    @FindBy(name = "password")
+    private WebElement passwordfield;
+    @FindBy(xpath = "//button[@type='submit']")
+    private WebElement SignInButton;
+
+
+    @FindBy(xpath = "//span[text()='Create']")
+    private WebElement CreateButton;
+    @FindBy(xpath = "//label[normalize-space(text())='Post Content']")
+    private WebElement PostTxtlbl;
+    @FindBy(xpath = "//textarea[@data-testid='post-content']")
+    private WebElement ContentTxtbox;
+    @FindBy(xpath = "//button[normalize-space(text())='X']")
+    private WebElement twitterButton;
+    @FindBy(xpath = "//button[normalize-space(text())='LinkedIn']")
+    private WebElement linkedinButton;
+    @FindBy(xpath = "//div[normalize-space(text())='Publish Now']")
+    private WebElement PublishButton;
+    @FindBy(xpath = "//button[normalize-space(text())='Schedule Post']")
+    private WebElement ScheduleButton;
+    //button[normalize-space(text())='Today']
+    @FindBy(xpath = "//button[normalize-space(text())='Today']")
+    private WebElement TodayButton;
+    @FindBy(xpath = "//button[normalize-space(text())='12:00 PM']")
+    private WebElement ScheduleTime;
+    @FindBy(xpath = "(//button[normalize-space(text())='Schedule Post'])[2]")
+    private WebElement SchedulePostButton;
+
 
 
 
 
     public void performLogin(){
-        click(AzureButton);
-        type(emailtxtfield, username);
-        click(NextButton);
-        type(passwordtxtfield, password);
-        click(NextButton);
-        waitforelement(signInTxt);
-        click(NextButton);
+        waitforelement(RapiscoopTxt,10);
+        type(emailfield, username);
+        type(passwordfield, password);
+        click(SignInButton);
+    }
+
+    public void createInstantPostTwitter(){
+        click(CreateButton,20);
+        waitforelement(PostTxtlbl,20);
+        type(ContentTxtbox,"instant twitter post");
+        click(twitterButton);
+        waitforelement(PublishButton,10);
+        click(PublishButton);
+    }
+
+    public void createInstantPostLinkedin(){
+        click(CreateButton,20);
+        waitforelement(PostTxtlbl,20);
+        type(ContentTxtbox,"instant linkedin post");
+        waitforelement(linkedinButton,10);
+        click(linkedinButton);
+        click(PublishButton);
+    }
+
+    public void createSchedulePostLinkedin(){
+        click(CreateButton,20);
+        waitforelement(PostTxtlbl,20);
+        type(ContentTxtbox,"scheduled linkedin post");
+        waitforelement(linkedinButton,10);
+        click(linkedinButton);
+        click(ScheduleButton);
+        waitforelement(TodayButton,10);
+        click(TodayButton);
+        click(ScheduleTime);
+        waitforelement(SchedulePostButton);
+        click(SchedulePostButton);
+    }
+
+
+    public void createSchedulePostTwitter(){
+        click(CreateButton,20);
+        waitforelement(PostTxtlbl,20);
+        type(ContentTxtbox,"scheduled twitter post");
+        waitforelement(twitterButton,10);
+        click(twitterButton);
+        click(ScheduleButton);
+        waitforelement(TodayButton,10);
+        click(TodayButton);
+        click(ScheduleTime);
+        waitforelement(SchedulePostButton);
+        click(SchedulePostButton);
+    }
+
+    public void createSchedulePostLinkedinandTwitter(){
+        click(CreateButton,20);
+        waitforelement(PostTxtlbl,20);
+        type(ContentTxtbox,"scheduled Linkedin and twitter post");
+        waitforelement(twitterButton,10);
+        click(twitterButton);
+        click(linkedinButton);
+        click(ScheduleButton);
+        waitforelement(TodayButton,10);
+        click(TodayButton);
+        click(ScheduleTime);
+        waitforelement(SchedulePostButton);
+        click(SchedulePostButton);
+    }
+
+    public void createInstantPostLinkedinandTwitter(){
+        click(CreateButton,20);
+        waitforelement(PostTxtlbl,20);
+        type(ContentTxtbox,"instant Linkedin and twitter post");
+        waitforelement(twitterButton,10);
+        click(twitterButton);
+        click(linkedinButton);
+        waitforelement(PublishButton);
+        click(PublishButton);
     }
 
 

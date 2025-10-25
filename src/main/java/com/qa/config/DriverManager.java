@@ -40,6 +40,7 @@ public class DriverManager {
 
     public String devUrl = props.getProperty("dev");
     public String testUrl = props.getProperty("test");
+    public String prodUrl = props.getProperty("prod");
     public String username = props.getProperty("username");
     public String password = props.getProperty("Password");
     public String targetEnvName = props.getProperty("env");
@@ -82,6 +83,8 @@ public class DriverManager {
             driver.get(devUrl);
         }else if(targetEnvName.equalsIgnoreCase("test")){
             driver.get(testUrl);
+        }else if(targetEnvName.equalsIgnoreCase("prod")){
+            driver.get(prodUrl);
         }else{
             System.out.println("Please choose the target url");
         }
@@ -97,7 +100,7 @@ public class DriverManager {
         driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
         hitTargetUrl();
-        LOGGER.info("Navigate into iEnterprise Web Application");
+        LOGGER.info("Navigate into Rapiscoop Web Application");
         driver.manage().window().maximize();
         LOGGER.info("maximize the screen for better visibility");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));

@@ -25,12 +25,12 @@ public class MyHooks {
     @Before
     public void initialize() throws Exception {
         Properties props = new PropertyManager().getProps();
-        /*DesiredCapabilities caps = new CapabilitiesManager().getCaps();
+        DesiredCapabilities caps = new CapabilitiesManager().getCaps();
         ThreadContext.put(ROUTINGKEY, props.getProperty(IOS_PLATFORM_NAME) + "_" + props.getProperty(IOS_DEVICE_NAME));
         new ServerManager().startServer();
         DriverManager driverManager = new DriverManager();
         AppiumDriver driver = driverManager.initializeDriver(caps);
-        driverManager.LaunchApp(driver, caps);*/
+        driverManager.LaunchApp(driver, caps);
     }
 
 

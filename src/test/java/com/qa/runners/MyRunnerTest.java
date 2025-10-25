@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import static io.cucumber.testng.CucumberOptions.SnippetType.CAMELCASE;
 
 @CucumberOptions(
-        glue = {"com.qa.stepdef","com.qa.hooks"}
+        glue = {"com.qa.stepdef"}
         , plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
         , monochrome = true
         , snippets = CAMELCASE
