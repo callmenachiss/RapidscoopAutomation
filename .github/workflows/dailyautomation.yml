@@ -2,9 +2,9 @@ name: Daily Automation Run
 
 on:
   schedule:
-    # Runs every day at 9 AM IST (3:30 AM UTC)
+    # Runs every day at 1:45 PM IST (08:15 UTC)
     - cron: "15 8 * * *"
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 jobs:
   run-tests:
@@ -64,7 +64,7 @@ jobs:
             The daily automation run has completed for *RapidscoopAutomation*.
 
             Repository: https://github.com/callmenachiss/RapidscoopAutomation  
-            Execution Time: 9 AM IST (Scheduled)  
+            Execution Time: 1:45 PM IST (Scheduled)  
             Status: ${{ job.status }}
 
             Please find attached the latest TestNG and Extent reports for review.
