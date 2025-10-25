@@ -33,7 +33,7 @@ jobs:
 
       # Step 4: Run Automation Tests using testng.xml
       - name: Run Automation Tests
-        run: mvn clean test -DsuiteXmlFile=./testng.xml
+        run: mvn clean test -D suiteXmlFile=testng.xml
 
       # Step 5: Upload TestNG and Extent Reports (optional for record)
       - name: Upload Test Reports
