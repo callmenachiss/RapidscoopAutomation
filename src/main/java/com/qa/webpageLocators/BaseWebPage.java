@@ -16,6 +16,8 @@ import org.openqa.selenium.support.ui.Select;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
@@ -151,11 +153,12 @@ public class BaseWebPage extends  DriverManager{
         }
 
         public String getTimerHHMM(){
-            LocalTime now = LocalTime.now();
-            LocalTime futureTime = now.plusMinutes(10);
+            // Get current time in IST
+            ZonedDateTime istNow = ZonedDateTime.now(ZoneId.of("Asia/Kolkata"));
+            ZonedDateTime futureTime = istNow.plusMinutes(10);
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
             String formattedTime = futureTime.format(formatter);
-            System.out.println("Current Time + 10 mins: " + formattedTime);
+            System.out.println("Current IST Time + 10 mins: " + formattedTime);
             return formattedTime;
         }
 
