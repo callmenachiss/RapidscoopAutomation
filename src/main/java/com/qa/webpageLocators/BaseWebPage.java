@@ -1,8 +1,8 @@
 package com.qa.webpageLocators;
 
 
-import com.beust.ah.A;
 import com.qa.config.DriverManager;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
@@ -15,6 +15,8 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 
@@ -140,6 +142,21 @@ public class BaseWebPage extends  DriverManager{
             Random random = new Random();
             int x = random.nextInt(9);
             return x;
+        }
+
+        public String generateRandomString(){
+          String random = RandomStringUtils.randomAlphanumeric(5);
+          System.out.println(random);
+          return random;
+        }
+
+        public String getTimerHHMM(){
+            LocalTime now = LocalTime.now();
+            LocalTime futureTime = now.plusMinutes(10);
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+            String formattedTime = futureTime.format(formatter);
+            System.out.println("Current Time + 10 mins: " + formattedTime);
+            return formattedTime;
         }
 
     public boolean isDisplayed(WebElement element) {

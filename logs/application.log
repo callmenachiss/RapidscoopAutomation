@@ -1,147 +1,74 @@
-[logs INFO ] 2025-10-25 10:49:00.937 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 10:49:01.013 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 10:49:18.174 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 10:49:19.542 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 10:50:26.322 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 10:50:26.398 CapabilitiesManager:17 - getting capabilities
-[logs INFO ] 2025-10-25 10:50:26.425 ServerManager:25 - starting appium server
-[logs INFO ] 2025-10-25 10:51:10.639 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 10:51:10.717 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 10:51:21.028 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 10:51:21.437 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 11:04:49.544 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 11:04:49.647 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 11:05:05.908 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 11:05:06.311 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 11:05:16.009 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 11:05:32.581 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 11:05:32.988 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 11:33:12.147 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 11:33:12.268 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 11:33:22.909 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 11:33:23.178 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 11:33:27.996 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 11:33:38.853 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 11:33:39.283 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 11:33:51.374 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 11:33:59.721 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 11:34:00.146 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 11:34:14.055 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 11:34:25.339 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 11:34:26.606 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 11:36:04.142 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 11:36:51.646 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 11:36:52.778 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 11:38:09.441 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 11:38:38.210 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 11:38:38.719 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 11:39:11.011 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 11:39:23.306 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 11:39:24.180 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 12:49:00.611 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 12:49:00.665 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 12:49:09.332 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 12:49:09.580 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 12:49:32.626 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 12:49:36.900 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 12:52:18.138 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 12:52:18.179 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 12:52:24.003 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 12:52:24.163 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 12:52:44.988 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 12:52:48.489 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 12:52:48.684 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 12:53:01.237 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 12:53:04.752 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 12:53:04.875 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 12:55:57.530 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 12:55:57.574 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 12:56:03.456 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 12:56:03.598 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 12:56:22.089 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 12:56:25.669 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 12:56:25.854 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 13:22:26.978 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 13:22:27.022 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 13:22:33.757 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 13:22:34.095 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 13:22:40.338 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:42:51.924 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 15:42:51.994 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:43:10.418 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:45:23.349 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 15:45:23.416 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:45:30.618 DriverManager:103 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 15:45:30.886 DriverManager:105 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 15:45:35.513 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:54:22.250 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 15:54:22.296 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:54:25.735 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:54:26.967 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:54:28.118 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:54:29.173 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:54:30.253 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:54:31.335 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:55:29.105 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 15:55:29.163 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:55:33.069 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:55:34.653 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:55:35.903 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:55:38.026 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:55:39.254 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:55:43.675 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:56:25.756 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 15:56:25.830 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:56:32.021 DriverManager:106 - Navigate into Rapiscoop Web Application
-[logs INFO ] 2025-10-25 15:56:32.147 DriverManager:108 - maximize the screen for better visibility
-[logs INFO ] 2025-10-25 15:56:38.322 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:58:07.679 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 15:58:07.742 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:58:11.024 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:58:12.143 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:58:13.237 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:58:14.427 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:58:15.519 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 15:58:16.770 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 16:03:18.476 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 16:03:18.521 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 16:03:24.785 DriverManager:123 - Navigated to Rapidscoop Web Application
-[logs INFO ] 2025-10-25 16:03:24.814 DriverManager:129 - WebDriver setup completed successfully
-[logs INFO ] 2025-10-25 16:03:28.731 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 16:03:31.778 DriverManager:123 - Navigated to Rapidscoop Web Application
-[logs INFO ] 2025-10-25 16:03:31.788 DriverManager:129 - WebDriver setup completed successfully
-[logs INFO ] 2025-10-25 16:03:58.797 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 16:05:19.366 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 16:05:19.637 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 16:05:27.482 DriverManager:123 - Navigated to Rapidscoop Web Application
-[logs INFO ] 2025-10-25 16:05:27.511 DriverManager:129 - WebDriver setup completed successfully
-[logs INFO ] 2025-10-25 16:05:36.282 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 16:05:41.538 DriverManager:123 - Navigated to Rapidscoop Web Application
-[logs INFO ] 2025-10-25 16:05:41.579 DriverManager:129 - WebDriver setup completed successfully
-[logs INFO ] 2025-10-25 16:11:29.108 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 16:11:29.555 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 16:11:59.285 DriverManager:123 - Navigated to Rapidscoop Web Application
-[logs INFO ] 2025-10-25 16:11:59.303 DriverManager:129 - WebDriver setup completed successfully
-[logs INFO ] 2025-10-25 16:12:42.579 DriverManager:96 - initializing Web driver
-[logs INFO ] 2025-10-25 16:57:58.614 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 16:57:58.694 DriverManager:97 - initializing Web driver
-[logs INFO ] 2025-10-25 16:58:12.596 DriverManager:125 - Navigated to Rapidscoop Web Application
-[logs INFO ] 2025-10-25 16:58:12.648 DriverManager:131 - WebDriver setup completed successfully
-[logs INFO ] 2025-10-25 16:58:27.466 DriverManager:97 - initializing Web driver
-[logs INFO ] 2025-10-25 16:58:31.845 DriverManager:125 - Navigated to Rapidscoop Web Application
-[logs INFO ] 2025-10-25 16:58:31.962 DriverManager:131 - WebDriver setup completed successfully
-[logs INFO ] 2025-10-25 16:59:00.467 DriverManager:97 - initializing Web driver
-[logs INFO ] 2025-10-25 16:59:03.709 DriverManager:125 - Navigated to Rapidscoop Web Application
-[logs INFO ] 2025-10-25 16:59:03.734 DriverManager:131 - WebDriver setup completed successfully
-[logs INFO ] 2025-10-25 16:59:31.517 DriverManager:97 - initializing Web driver
-[logs INFO ] 2025-10-25 17:22:15.356 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 17:22:15.948 DriverManager:97 - initializing Web driver
-[logs INFO ] 2025-10-25 17:22:29.248 DriverManager:125 - Navigated to Rapidscoop Web Application
-[logs INFO ] 2025-10-25 17:22:29.308 DriverManager:131 - WebDriver setup completed successfully
-[logs INFO ] 2025-10-25 17:23:04.069 DriverManager:97 - initializing Web driver
-[logs INFO ] 2025-10-25 17:23:16.470 DriverManager:125 - Navigated to Rapidscoop Web Application
-[logs INFO ] 2025-10-25 17:23:16.497 DriverManager:131 - WebDriver setup completed successfully
-[logs INFO ] 2025-10-25 17:49:57.238 PropertyManager:19 - Loading config properties
-[logs INFO ] 2025-10-25 17:49:57.536 DriverManager:97 - initializing Web driver
-[logs INFO ] 2025-10-25 17:50:05.910 DriverManager:125 - Navigated to Rapidscoop Web Application
-[logs INFO ] 2025-10-25 17:50:05.929 DriverManager:131 - WebDriver setup completed successfully
+[logs INFO ] 2025-10-26 18:28:03.336 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-26 18:28:03.411 CapabilitiesManager:17 - getting capabilities
+[logs INFO ] 2025-10-26 18:28:03.429 ServerManager:25 - starting appium server
+[logs INFO ] 2025-10-26 18:28:53.313 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-26 18:28:53.361 DriverManager:139 - initializing Web driver
+[logs INFO ] 2025-10-26 18:29:02.640 DriverManager:146 - Navigate into Rapiscoop Web Application
+[logs INFO ] 2025-10-26 18:29:02.811 DriverManager:148 - maximize the screen for better visibility
+[logs INFO ] 2025-10-26 18:29:07.953 DriverManager:139 - initializing Web driver
+[logs INFO ] 2025-10-26 18:29:11.234 DriverManager:146 - Navigate into Rapiscoop Web Application
+[logs INFO ] 2025-10-26 18:29:11.989 DriverManager:148 - maximize the screen for better visibility
+[logs INFO ] 2025-10-26 18:44:50.902 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-26 18:44:50.946 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 18:44:58.376 DriverManager:130 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-10-26 18:44:58.378 DriverManager:132 - WebDriver setup completed for Local environment
+[logs INFO ] 2025-10-26 18:45:04.847 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 18:45:08.782 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 18:48:40.000 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-26 18:48:40.045 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 18:48:47.415 DriverManager:131 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-10-26 18:48:47.415 DriverManager:133 - WebDriver setup completed for Local environment
+[logs INFO ] 2025-10-26 18:51:03.510 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-26 18:51:03.555 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 18:51:11.250 DriverManager:136 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-10-26 18:51:11.250 DriverManager:138 - WebDriver setup completed for Local environment
+[logs INFO ] 2025-10-26 18:51:14.740 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 18:51:20.240 DriverManager:136 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-10-26 18:51:20.243 DriverManager:138 - WebDriver setup completed for Local environment
+[logs INFO ] 2025-10-26 18:51:43.455 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 18:51:48.109 DriverManager:136 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-10-26 18:51:48.109 DriverManager:138 - WebDriver setup completed for Local environment
+[logs INFO ] 2025-10-26 18:52:02.866 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 18:52:06.244 DriverManager:136 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-10-26 18:52:06.244 DriverManager:138 - WebDriver setup completed for Local environment
+[logs INFO ] 2025-10-26 18:52:21.733 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 18:52:26.071 DriverManager:136 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-10-26 18:52:26.073 DriverManager:138 - WebDriver setup completed for Local environment
+[logs INFO ] 2025-10-26 18:52:44.387 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 18:52:48.748 DriverManager:136 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-10-26 18:52:48.748 DriverManager:138 - WebDriver setup completed for Local environment
+[logs INFO ] 2025-10-26 18:53:07.336 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 18:53:10.609 DriverManager:136 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-10-26 18:53:10.610 DriverManager:138 - WebDriver setup completed for Local environment
+[logs INFO ] 2025-10-26 19:00:23.017 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-26 19:00:23.076 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 19:02:06.362 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-26 19:02:06.403 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 19:06:19.931 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-26 19:06:19.971 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 19:07:34.411 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-26 19:07:34.461 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 19:15:01.187 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-26 19:15:01.232 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 19:22:09.790 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-26 19:22:09.836 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 19:32:14.906 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-26 19:32:14.955 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 19:33:16.524 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-26 19:33:16.580 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 19:34:37.912 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-26 19:34:37.960 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 19:34:46.308 DriverManager:136 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-10-26 19:34:46.308 DriverManager:138 - WebDriver setup completed for Local environment
+[logs INFO ] 2025-10-26 19:35:39.680 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-26 19:35:39.733 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 19:35:47.501 DriverManager:136 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-10-26 19:35:47.501 DriverManager:138 - WebDriver setup completed for Local environment
+[logs INFO ] 2025-10-26 19:36:50.190 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-26 19:36:50.238 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 19:36:57.498 DriverManager:136 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-10-26 19:36:57.500 DriverManager:138 - WebDriver setup completed for Local environment
+[logs INFO ] 2025-10-26 19:37:56.752 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-10-26 19:37:56.789 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-10-26 19:38:04.145 DriverManager:136 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-10-26 19:38:04.145 DriverManager:138 - WebDriver setup completed for Local environment

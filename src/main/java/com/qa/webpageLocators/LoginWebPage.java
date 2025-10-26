@@ -61,6 +61,8 @@ public class LoginWebPage extends BaseWebPage{
     //button[normalize-space(text())='Today']
     @FindBy(xpath = "//button[normalize-space(text())='Today']")
     private WebElement TodayButton;
+    @FindBy(xpath = "//input[@type='time']")
+    private WebElement Timertxtbox;
     @FindBy(xpath = "//button[normalize-space(text())='7:00 PM']")
     private WebElement ScheduleTime;
     @FindBy(xpath = "(//button[normalize-space(text())='Schedule Post'])[2]")
@@ -96,6 +98,7 @@ public class LoginWebPage extends BaseWebPage{
     }
 
     public void createSchedulePostLinkedin(){
+        String time=getTimerHHMM();
         click(CreateButton,20);
         waitforelement(PostTxtlbl,20);
         type(ContentTxtbox,"scheduled linkedin post");
@@ -104,13 +107,15 @@ public class LoginWebPage extends BaseWebPage{
         click(ScheduleButton);
         waitforelement(TodayButton,10);
         click(TodayButton);
-        click(ScheduleTime);
+        type(Timertxtbox,time);
+        //click(ScheduleTime);
         waitforelement(SchedulePostButton);
         click(SchedulePostButton);
     }
 
 
     public void createSchedulePostTwitter(){
+        String time=getTimerHHMM();
         click(CreateButton,20);
         waitforelement(PostTxtlbl,20);
         type(ContentTxtbox,"scheduled twitter post");
@@ -119,12 +124,14 @@ public class LoginWebPage extends BaseWebPage{
         click(ScheduleButton);
         waitforelement(TodayButton,10);
         click(TodayButton);
-        click(ScheduleTime);
+        type(Timertxtbox,time);
+        //click(ScheduleTime);
         waitforelement(SchedulePostButton);
         click(SchedulePostButton);
     }
 
     public void createSchedulePostLinkedinandTwitter(){
+        String time=getTimerHHMM();
         click(CreateButton,20);
         waitforelement(PostTxtlbl,20);
         type(ContentTxtbox,"scheduled Linkedin and twitter post");
@@ -134,7 +141,8 @@ public class LoginWebPage extends BaseWebPage{
         click(ScheduleButton);
         waitforelement(TodayButton,10);
         click(TodayButton);
-        click(ScheduleTime);
+        type(Timertxtbox,time);
+        //click(ScheduleTime);
         waitforelement(SchedulePostButton);
         click(SchedulePostButton);
     }

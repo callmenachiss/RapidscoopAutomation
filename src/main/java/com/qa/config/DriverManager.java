@@ -93,6 +93,57 @@ public class DriverManager {
 
 
     //web-init
+
+    public void LaunchWebApp() {
+        LOGGER.info("Initializing WebDriver...");
+
+        boolean isCi = System.getenv("CI") != null;  // GitHub Actions sets this automatically
+        ChromeOptions options = new ChromeOptions();
+
+        if (isCi) {
+            // ----------------------------
+            // ✅ CI / Pipeline Environment
+            // ----------------------------
+            LOGGER.info("Running in CI environment: using WebDriverManager + Headless mode");
+
+            WebDriverManager.chromedriver().setup();
+
+            options.addArguments("--headless=new");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--user-data-dir=/tmp/chrome-profile-" + System.currentTimeMillis());
+
+            driver = new ChromeDriver(options);
+        } else {
+            options.addArguments("--remote-allow-origins=*");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--start-maximized");
+
+            driver = new ChromeDriver(options);
+            //driver = new ChromeDriver();
+            driver.manage().window().maximize();
+        }
+
+        // Common setup for both environments
+        driver.manage().deleteAllCookies();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+        // Navigate to app
+        hitTargetUrl();
+        LOGGER.info("Navigated to Rapidscoop Web Application successfully");
+
+        LOGGER.info("WebDriver setup completed for " + (isCi ? "CI pipeline" : "Local environment"));
+    }
+
+
+
+
+
+
+    /*
     public void LaunchWebApp() {
         LOGGER.info("initializing Web driver");
 
@@ -129,7 +180,7 @@ public class DriverManager {
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
         LOGGER.info("WebDriver setup completed successfully");
-    }
+    }*/
 
 
 
@@ -147,8 +198,7 @@ public class DriverManager {
         LOGGER.info("maximize the screen for better visibility");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-    }
-    */
+    }*/
 
 
     public void tearDown(){
