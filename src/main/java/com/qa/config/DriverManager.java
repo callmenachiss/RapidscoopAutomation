@@ -114,7 +114,7 @@ public class DriverManager {
             options.addArguments("--window-size=1920,1080");
             options.addArguments("--disable-gpu");
             options.addArguments("--user-data-dir=/tmp/chrome-profile-" + System.currentTimeMillis());
-
+            options.addArguments("--remote-allow-origins=*");
             driver = new ChromeDriver(options);
         } else {
             options.addArguments("--remote-allow-origins=*");
