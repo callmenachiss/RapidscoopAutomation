@@ -11,7 +11,7 @@ on:
 
 jobs:
   run-tests:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted  # 👈 Use your own runner (your machine setup)
 
     steps:
       # Step 1: Checkout code
@@ -34,33 +34,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      # Step 4: Install Google Chrome (for visible browser)
-      - name: Install Google Chrome
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y wget gnupg2
-          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-          echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
-          google-chrome --version
-
-      # Step 5: Start Virtual Display (for non-headless Chrome rendering)
-      - name: Start Xvfb (Virtual Display)
-        run: |
-          sudo apt-get install -y xvfb
-          Xvfb :99 -screen 0 1920x1080x24 &
-          export DISPLAY=:99
-        env:
-          DISPLAY: :99
-
-      # Step 6: Run Automation Tests using testng.xml
+      # Step 4: Run Automation Tests using your local Chrome setup
       - name: Run Automation Tests
         env:
-          DISPLAY: :99
+          # 👇 Toggle headless automatically
+          HEADLESS_MODE: ${{ github.event_name != 'workflow_dispatch' && 'true' || 'false' }}
         run: mvn clean test -D suiteXmlFile=testng.xml
 
-      # Step 7: Extract Pass/Fail/Skip counts from TestNG results
+      # Step 5: Extract Pass/Fail/Skip counts from TestNG results
       - name: Parse TestNG Results Summary
         if: always()
         id: test_summary
@@ -86,7 +67,7 @@ jobs:
             echo "skipped=0" >> $GITHUB_OUTPUT
           fi
 
-      # Step 8: Upload TestNG and Extent Reports
+      # Step 6: Upload TestNG and Extent Reports
       - name: Upload Test Reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -97,7 +78,7 @@ jobs:
             target/extent-reports/
           if-no-files-found: ignore
 
-      # Step 9: Send Email with Report, Summary, and GitHub link
+      # Step 7: Send Email with Report, Summary, and GitHub link
       - name: Send Test Report Email
         if: always()
         uses: dawidd6/action-send-mail@v3
@@ -109,6 +90,7 @@ jobs:
           subject: "🚀 Daily Automation Report - Run #${{ github.run_number }}"
           to: nachiyappan7777@gmail.com
           from: "GitHub CI <${{ secrets.EMAIL_USERNAME }}>"
+
           body: |
             Hi Nachiyappan 👋,
 
@@ -118,6 +100,8 @@ jobs:
             • Repository: [RapidscoopAutomation](${{ github.server_url }}/${{ github.repository }})
             • Workflow Run: [View on GitHub Actions](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
             • Status: **${{ job.status }}**
+            • Execution Type: ${{ github.event_name }}
+            • Headless Mode: ${{ github.event_name != 'workflow_dispatch' && 'Enabled' || 'Disabled' }}
             • Execution Time: 9:00 AM IST (Scheduled)
 
             ✅ **Test Summary**
@@ -133,6 +117,7 @@ jobs:
             ---
             Regards,  
             QA Automation Bot 🤖
+
           attachments: |
             test-output/emailable-report.html
             target/extent-reports/index.html

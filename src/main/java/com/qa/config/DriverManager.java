@@ -97,45 +97,51 @@ public class DriverManager {
     public void LaunchWebApp() {
         LOGGER.info("Initializing WebDriver...");
 
-        boolean isCi = System.getenv("CI") != null;  // GitHub Actions sets this automatically
+        boolean isCi = System.getenv("CI") != null;
+        boolean isHeadless = Boolean.parseBoolean(System.getenv("HEADLESS_MODE"));
+
         ChromeOptions options = new ChromeOptions();
 
-        if (isCi) {
+        if (isCi || isHeadless) {
             // ----------------------------
-            // ✅ CI / Pipeline Environment
+            // ✅ CI / Headless Environment
             // ----------------------------
-            LOGGER.info("Running in CI environment: using WebDriverManager + Headless mode");
+            LOGGER.info("Running in CI/headless environment.");
 
-            WebDriverManager.chromedriver().setup();
+            // Only use WebDriverManager in CI, not self-hosted
+            if (isCi) {
+                WebDriverManager.chromedriver().setup();
+            }
 
             options.addArguments("--headless=new");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
             options.addArguments("--window-size=1920,1080");
             options.addArguments("--disable-gpu");
-            options.addArguments("--user-data-dir=/tmp/chrome-profile-" + System.currentTimeMillis());
             options.addArguments("--remote-allow-origins=*");
+
             driver = new ChromeDriver(options);
         } else {
+            // ----------------------------
+            // 🧩 Local (headed) Environment
+            // ----------------------------
+            LOGGER.info("Running locally (headed mode).");
             options.addArguments("--remote-allow-origins=*");
             options.addArguments("--disable-gpu");
             options.addArguments("--start-maximized");
 
             driver = new ChromeDriver(options);
-            //driver = new ChromeDriver();
             driver.manage().window().maximize();
         }
 
-        // Common setup for both environments
+        // Common setup for both
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-        // Navigate to app
         hitTargetUrl();
         LOGGER.info("Navigated to Rapidscoop Web Application successfully");
-
-        LOGGER.info("WebDriver setup completed for " + (isCi ? "CI pipeline" : "Local environment"));
+        LOGGER.info("WebDriver setup completed for " + (isCi ? "CI pipeline" : (isHeadless ? "headless run" : "local environment")));
     }
 
 
