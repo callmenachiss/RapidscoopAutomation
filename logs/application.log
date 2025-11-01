@@ -60,3 +60,18 @@
 [logs INFO ] 2025-11-01 14:03:48.411 DriverManager:143 - Navigated to Rapidscoop Web Application successfully
 [logs INFO ] 2025-11-01 14:03:48.412 DriverManager:144 - WebDriver setup completed for local environment
 [logs INFO ] 2025-11-01 14:04:11.517 BaseWebPage:34 - Browser closed successfully.
+[logs INFO ] 2025-11-01 15:33:08.519 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-11-01 15:33:08.570 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-11-01 15:33:08.580 DriverManager:128 - Running locally (headed mode).
+[logs INFO ] 2025-11-01 15:33:22.304 DriverManager:143 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-11-01 15:33:22.307 DriverManager:144 - WebDriver setup completed for local environment
+[logs INFO ] 2025-11-01 15:33:28.015 BaseWebPage:178 - Today's Date: 2025-11-01
+[logs INFO ] 2025-11-01 15:33:28.048 BaseWebPage:195 - Current Time + 10 mins: 15:43
+[logs INFO ] 2025-11-01 15:37:37.033 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-11-01 15:37:37.078 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-11-01 15:37:37.088 DriverManager:128 - Running locally (headed mode).
+[logs INFO ] 2025-11-01 15:37:45.012 DriverManager:143 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-11-01 15:37:45.012 DriverManager:144 - WebDriver setup completed for local environment
+[logs INFO ] 2025-11-01 15:37:50.473 BaseWebPage:178 - Today's Date: 2025-11-01
+[logs INFO ] 2025-11-01 15:37:50.475 BaseWebPage:195 - Current Time + 10 mins: 15:47
+[logs INFO ] 2025-11-01 15:38:11.410 BaseWebPage:35 - Browser closed successfully.

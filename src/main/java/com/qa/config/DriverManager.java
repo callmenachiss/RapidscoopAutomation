@@ -71,7 +71,7 @@ public class DriverManager {
 
 
     //web
-    public RemoteWebDriver getWebDriver(){
+    public RemoteWebDriver  getWebDriver(){
         return webdriverThreadLocal.get();
     }
     public void SetDriver(RemoteWebDriver remoteWebDriver) {
