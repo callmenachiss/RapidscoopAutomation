@@ -11,6 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -67,9 +68,8 @@ public class LoginWebPage extends BaseWebPage{
     private WebElement ScheduleTime;
     @FindBy(xpath = "(//button[normalize-space(text())='Schedule Post'])[2]")
     private WebElement SchedulePostButton;
-
-
-
+    @FindBy(xpath = "//span[contains(text(),'Your post has')]")
+    private WebElement ToastMessage;
 
 
     public void performLogin(){
@@ -114,7 +114,7 @@ public class LoginWebPage extends BaseWebPage{
     }
 
 
-    public void createSchedulePostTwitter(){
+    public void createSchedulePostTwitter() throws InterruptedException {
         String time=getTimerHHMM();
         click(CreateButton,20);
         waitforelement(PostTxtlbl,20);
@@ -129,6 +129,9 @@ public class LoginWebPage extends BaseWebPage{
         waitforelement(SchedulePostButton);
         //captureScreenShot("twitterpost");
         click(SchedulePostButton);
+        waitforelement(ToastMessage,10);
+        Assert.assertEquals(ToastMessage.getText(),"Your post has been scheduled successfully!");
+        LOGGER.info(ToastMessage.getText());
     }
 
     public void createSchedulePostLinkedinandTwitter(){
