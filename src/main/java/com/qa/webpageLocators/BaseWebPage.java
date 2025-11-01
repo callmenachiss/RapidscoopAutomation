@@ -189,7 +189,7 @@ public class BaseWebPage extends  DriverManager{
         ZonedDateTime adjustedTime;
         if (isCi) {
             // CI runs on UTC → add +5h30m to convert to IST equivalent
-            adjustedTime = now.plusHours(5).plusMinutes(30);
+            adjustedTime = now.plusHours(1).plusMinutes(10);
         } else {
             // Local run → just add +10 minutes
             adjustedTime = now.plusMinutes(10);
