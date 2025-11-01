@@ -124,10 +124,11 @@ public class LoginWebPage extends BaseWebPage{
         click(ScheduleButton);
         waitforelement(TodayButton,10);
         click(TodayButton);
-        type(Timertxtbox,time);
+        //type(Timertxtbox,time);
         //click(ScheduleTime);
         waitforelement(SchedulePostButton);
         //captureScreenShot("twitterpost");
+        click(ScheduleTime);
         click(SchedulePostButton);
         waitforelement(ToastMessage,10);
         Assert.assertEquals(ToastMessage.getText(),"Your post has been scheduled successfully!");

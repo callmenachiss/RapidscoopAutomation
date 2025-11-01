@@ -180,7 +180,8 @@ public class BaseWebPage extends  DriverManager{
         boolean isCi = System.getenv("CI") != null || System.getenv("GITHUB_ACTIONS") != null;
 
         // Choose timezone based on environment
-        ZoneId zone = isCi ? ZoneId.of("UTC") : ZoneId.systemDefault();
+        //ZoneId zone = isCi ? ZoneId.of("UTC") : ZoneId.systemDefault();
+        ZoneId zone = ZoneId.systemDefault();
 
         // Get current time in appropriate zone
         ZonedDateTime now = ZonedDateTime.now(zone);
