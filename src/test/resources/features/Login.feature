@@ -19,7 +19,7 @@ Feature: Login into Rapidscoop Application
     Then Create a instant post for linkedin
     And I close my web browser
 
-  @Login
+  @Login1
   Scenario: Create schedule post in twitter
     Given User login into Rapidscoop Web Application
     Then Create a schedule post for twitter
