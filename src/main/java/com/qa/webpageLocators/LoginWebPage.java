@@ -111,6 +111,9 @@ public class LoginWebPage extends BaseWebPage{
         //click(ScheduleTime);
         waitforelement(SchedulePostButton);
         click(SchedulePostButton);
+        waitforelement(ToastMessage,10);
+        Assert.assertEquals(ToastMessage.getText(),"Your post has been scheduled successfully!");
+        LOGGER.info(ToastMessage.getText());
     }
 
 
@@ -150,6 +153,9 @@ public class LoginWebPage extends BaseWebPage{
         //click(ScheduleTime);
         waitforelement(SchedulePostButton);
         click(SchedulePostButton);
+        waitforelement(ToastMessage,10);
+        Assert.assertEquals(ToastMessage.getText(),"Your post has been scheduled successfully!");
+        LOGGER.info(ToastMessage.getText());
     }
 
     public void createInstantPostLinkedinandTwitter(){
