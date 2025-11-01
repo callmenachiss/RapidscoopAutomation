@@ -28,7 +28,14 @@ public class BaseWebPage extends  DriverManager{
     private static final Logger LOGGER = LogManager.getLogger(BaseWebPage.class);
 
     public  void teardown() {
-        driver.quit();
+            if (driver != null) {
+                try {
+                    driver.quit();
+                    LOGGER.info("Browser closed successfully.");
+                } catch (Exception e) {
+                    LOGGER.warn("Ignoring WebDriver shutdown exception: " + e.getMessage());
+                }
+            }
     }
 
     public String getUrlofCurrentPage(){
@@ -152,6 +159,7 @@ public class BaseWebPage extends  DriverManager{
           return random;
         }
 
+        /*
         public String getTimerHHMM(){
             // Get current time in IST
             ZonedDateTime istNow = ZonedDateTime.now(ZoneId.of("Asia/Kolkata"));
@@ -160,7 +168,29 @@ public class BaseWebPage extends  DriverManager{
             String formattedTime = futureTime.format(formatter);
             System.out.println("Current IST Time + 10 mins: " + formattedTime);
             return formattedTime;
-        }
+        }*/
+
+
+    public String getTimerHHMM() {
+        // Detect if running in CI (commonly set in pipelines like GitHub Actions, Jenkins, etc.)
+        boolean isCi = System.getenv("CI") != null || System.getenv("GITHUB_ACTIONS") != null;
+
+        // Choose timezone based on environment
+        ZoneId zone = isCi ? ZoneId.of("UTC") : ZoneId.systemDefault();
+
+        // Get current time in appropriate zone
+        ZonedDateTime now = ZonedDateTime.now(zone);
+        ZonedDateTime futureTime = now.plusMinutes(10);
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+        String formattedTime = futureTime.format(formatter);
+
+        System.out.println("Environment: " + (isCi ? "CI (UTC)" : "Local (" + zone + ")"));
+        System.out.println("Current Time + 10 mins: " + formattedTime);
+
+        return formattedTime;
+    }
+
 
     public boolean isDisplayed(WebElement element) {
         try {
