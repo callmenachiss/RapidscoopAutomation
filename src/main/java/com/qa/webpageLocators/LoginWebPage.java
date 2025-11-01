@@ -127,6 +127,7 @@ public class LoginWebPage extends BaseWebPage{
         type(Timertxtbox,time);
         //click(ScheduleTime);
         waitforelement(SchedulePostButton);
+        captureScreenShot("twitterpost");
         click(SchedulePostButton);
     }
 

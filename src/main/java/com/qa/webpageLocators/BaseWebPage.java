@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -172,6 +173,9 @@ public class BaseWebPage extends  DriverManager{
 
 
     public String getTimerHHMM() {
+        LocalDate today = LocalDate.now();
+        System.out.println("Today's Date: " + today);
+        LOGGER.info("Today's Date: " + today);
         // Detect if running in CI (commonly set in pipelines like GitHub Actions, Jenkins, etc.)
         boolean isCi = System.getenv("CI") != null || System.getenv("GITHUB_ACTIONS") != null;
 
@@ -187,6 +191,8 @@ public class BaseWebPage extends  DriverManager{
 
         System.out.println("Environment: " + (isCi ? "CI (UTC)" : "Local (" + zone + ")"));
         System.out.println("Current Time + 10 mins: " + formattedTime);
+
+        LOGGER.info("Current Time + 10 mins: " + formattedTime);
 
         return formattedTime;
     }

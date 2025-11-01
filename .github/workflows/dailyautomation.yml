@@ -11,7 +11,7 @@ on:
 
 jobs:
   run-tests:
-    runs-on: self-hosted  # 👈 Use your own runner (your machine setup)
+    runs-on: ubuntu-latest
 
     steps:
       # Step 1: Checkout code
@@ -34,11 +34,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      # Step 4: Run Automation Tests using your local Chrome setup
+      # Step 4: Run Automation Tests using testng.xml
       - name: Run Automation Tests
-        env:
-          # 👇 Toggle headless automatically
-          HEADLESS_MODE: ${{ github.event_name != 'workflow_dispatch' && 'true' || 'false' }}
         run: mvn clean test -D suiteXmlFile=testng.xml
 
       # Step 5: Extract Pass/Fail/Skip counts from TestNG results
@@ -90,7 +87,6 @@ jobs:
           subject: "🚀 Daily Automation Report - Run #${{ github.run_number }}"
           to: nachiyappan7777@gmail.com
           from: "GitHub CI <${{ secrets.EMAIL_USERNAME }}>"
-
           body: |
             Hi Nachiyappan 👋,
 
@@ -100,9 +96,7 @@ jobs:
             • Repository: [RapidscoopAutomation](${{ github.server_url }}/${{ github.repository }})
             • Workflow Run: [View on GitHub Actions](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
             • Status: **${{ job.status }}**
-            • Execution Type: ${{ github.event_name }}
-            • Headless Mode: ${{ github.event_name != 'workflow_dispatch' && 'Enabled' || 'Disabled' }}
-            • Execution Time: 9:00 AM IST (Scheduled)
+            • Execution Time: 1:45 PM IST (Scheduled)
 
             ✅ **Test Summary**
             • Passed: ${{ steps.test_summary.outputs.passed }}
@@ -116,8 +110,7 @@ jobs:
 
             ---
             Regards,  
-            QA Automation Bot 🤖
-
+            QA Automation  Bot 🤖
           attachments: |
             test-output/emailable-report.html
             target/extent-reports/index.html
