@@ -180,17 +180,25 @@ public class BaseWebPage extends  DriverManager{
         boolean isCi = System.getenv("CI") != null || System.getenv("GITHUB_ACTIONS") != null;
 
         // Choose timezone based on environment
-        //ZoneId zone = isCi ? ZoneId.of("UTC") : ZoneId.systemDefault();
-        ZoneId zone = ZoneId.systemDefault();
+        ZoneId zone = isCi ? ZoneId.of("UTC") : ZoneId.systemDefault();
+
 
         // Get current time in appropriate zone
         ZonedDateTime now = ZonedDateTime.now(zone);
-        ZonedDateTime futureTime = now.plusMinutes(10);
+        //ZonedDateTime futureTime = now.plusMinutes(10);
+        ZonedDateTime adjustedTime;
+        if (isCi) {
+            // CI runs on UTC → add +5h30m to convert to IST equivalent
+            adjustedTime = now.plusHours(5).plusMinutes(30);
+        } else {
+            // Local run → just add +10 minutes
+            adjustedTime = now.plusMinutes(10);
+        }
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
-        String formattedTime = futureTime.format(formatter);
+        String formattedTime = adjustedTime.format(formatter);
 
-        System.out.println("Environment: " + (isCi ? "CI (UTC)" : "Local (" + zone + ")"));
+        //System.out.println("Environment: " + (isCi ? "CI (UTC)" : "Local (" + zone + ")"));
         System.out.println("Current Time + 10 mins: " + formattedTime);
 
         LOGGER.info("Current Time + 10 mins: " + formattedTime);
