@@ -14,6 +14,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 public class LoginWebPage extends BaseWebPage{
@@ -55,7 +57,7 @@ public class LoginWebPage extends BaseWebPage{
     private WebElement twitterButton;
     @FindBy(xpath = "//button[normalize-space(text())='LinkedIn']")
     private WebElement linkedinButton;
-    @FindBy(xpath = "//div[normalize-space(text())='Publish Now']")
+    @FindBy(xpath = "//*[normalize-space(text())='Publish Now']")
     private WebElement PublishButton;
     @FindBy(xpath = "//button[normalize-space(text())='Schedule Post']")
     private WebElement ScheduleButton;
@@ -68,8 +70,12 @@ public class LoginWebPage extends BaseWebPage{
     private WebElement ScheduleTime;
     @FindBy(xpath = "(//button[normalize-space(text())='Schedule Post'])[2]")
     private WebElement SchedulePostButton;
-    @FindBy(xpath = "//span[contains(text(),'Your post has')]")
+    @FindBy(xpath = "//*[contains(text(),'Your post has')]")
     private WebElement ToastMessage;
+    @FindBy(xpath = "//button[@data-magic-post='true']")
+    private List<WebElement> Magicbutton;
+    @FindBy(xpath = "//h2[normalize-space(text())='Magic Post']")
+    private WebElement Magiclbl;
 
 
     public void performLogin(){
@@ -167,6 +173,28 @@ public class LoginWebPage extends BaseWebPage{
         click(linkedinButton);
         waitforelement(PublishButton);
         click(PublishButton);
+    }
+
+
+    public void createMagicPost(){
+
+       //waitforelement(Magicbutton,10);
+       //click(Magicbutton,10);
+        if (Magicbutton.isEmpty()) {
+                    throw new NoSuchElementException("No Magic buttons found on the page!");
+        }
+        int limit = Math.min(Magicbutton.size(), 5);
+        int randomIndex = ThreadLocalRandom.current().nextInt(0, limit);
+        WebElement randomButton = Magicbutton.get(randomIndex);
+        wait.until(ExpectedConditions.elementToBeClickable(randomButton)).click();
+        LOGGER.info("Using Magic post "+randomButton);
+        System.out.println("Using Magic post "+randomButton);
+       waitforelement(Magiclbl,20);
+       waitforelement(PublishButton,25);
+       click(PublishButton,10);
+       waitforelement(ToastMessage,10);
+       Assert.assertEquals(ToastMessage.getText(),"Your post has been published successfully!");
+       LOGGER.info(ToastMessage.getText());
     }
 
 

@@ -74,6 +74,14 @@ public class LoginpageStepDef extends BaseWebPage {
         forcedSleep();
     }
 
+    @Then("Create Magic post")
+    public void Create_Magic_post() throws InterruptedException {
+        loginPage = new LoginWebPage(driver);
+        minSleep();
+        loginPage.createMagicPost();
+        forcedSleep();
+    }
+
     @Then("I close my web browser")
     public void i_close_my_web_browser() throws InterruptedException {
         System.out.println("Close the browser for better performance");

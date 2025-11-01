@@ -99,3 +99,42 @@
 [logs INFO ] 2025-11-01 16:03:40.752 DriverManager:144 - WebDriver setup completed for local environment
 [logs INFO ] 2025-11-01 16:03:49.755 BaseWebPage:178 - Today's Date: 2025-11-01
 [logs INFO ] 2025-11-01 16:03:49.836 BaseWebPage:196 - Current Time + 10 mins: 16:13
+[logs INFO ] 2025-11-01 16:37:45.734 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-11-01 16:37:45.797 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-11-01 16:37:45.811 DriverManager:128 - Running locally (headed mode).
+[logs INFO ] 2025-11-01 16:37:54.951 DriverManager:143 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-11-01 16:37:54.951 DriverManager:144 - WebDriver setup completed for local environment
+[logs INFO ] 2025-11-01 16:39:33.103 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-11-01 16:39:33.168 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-11-01 16:39:33.177 DriverManager:128 - Running locally (headed mode).
+[logs INFO ] 2025-11-01 16:39:39.406 DriverManager:143 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-11-01 16:39:39.406 DriverManager:144 - WebDriver setup completed for local environment
+[logs INFO ] 2025-11-01 16:43:46.461 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-11-01 16:43:46.506 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-11-01 16:43:46.515 DriverManager:128 - Running locally (headed mode).
+[logs INFO ] 2025-11-01 16:43:53.642 DriverManager:143 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-11-01 16:43:53.642 DriverManager:144 - WebDriver setup completed for local environment
+[logs INFO ] 2025-11-01 16:48:13.774 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-11-01 16:48:13.826 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-11-01 16:48:13.835 DriverManager:128 - Running locally (headed mode).
+[logs INFO ] 2025-11-01 16:48:19.471 DriverManager:143 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-11-01 16:48:19.473 DriverManager:144 - WebDriver setup completed for local environment
+[logs INFO ] 2025-11-01 16:48:41.645 LoginWebPage:185 - Your post has been published successfully!
+[logs INFO ] 2025-11-01 16:58:40.900 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-11-01 16:58:40.943 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-11-01 16:58:40.955 DriverManager:128 - Running locally (headed mode).
+[logs INFO ] 2025-11-01 16:58:46.778 DriverManager:143 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-11-01 16:58:46.797 DriverManager:144 - WebDriver setup completed for local environment
+[logs INFO ] 2025-11-01 17:09:28.072 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-11-01 17:09:28.122 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-11-01 17:09:28.132 DriverManager:128 - Running locally (headed mode).
+[logs INFO ] 2025-11-01 17:09:33.855 DriverManager:143 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-11-01 17:09:33.855 DriverManager:144 - WebDriver setup completed for local environment
+[logs INFO ] 2025-11-01 17:12:21.953 PropertyManager:19 - Loading config properties
+[logs INFO ] 2025-11-01 17:12:22.002 DriverManager:98 - Initializing WebDriver...
+[logs INFO ] 2025-11-01 17:12:22.013 DriverManager:128 - Running locally (headed mode).
+[logs INFO ] 2025-11-01 17:12:28.143 DriverManager:143 - Navigated to Rapidscoop Web Application successfully
+[logs INFO ] 2025-11-01 17:12:28.178 DriverManager:144 - WebDriver setup completed for local environment
+[logs INFO ] 2025-11-01 17:12:35.990 LoginWebPage:190 - Using Magic post [[ChromeDriver: chrome on windows (5242311bacd1025613eb8c40c69b893c)] -> xpath: //button[@data-magic-post='true']]
+[logs INFO ] 2025-11-01 17:12:55.391 LoginWebPage:197 - Your post has been published successfully!
+[logs INFO ] 2025-11-01 17:13:02.187 BaseWebPage:35 - Browser closed successfully.
