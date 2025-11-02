@@ -66,7 +66,7 @@ public class LoginWebPage extends BaseWebPage{
     private WebElement TodayButton;
     @FindBy(xpath = "//input[@type='time']")
     private WebElement Timertxtbox;
-    @FindBy(xpath = "//button[normalize-space(text())='12:00 PM']")
+    @FindBy(xpath = "//button[normalize-space(text())='9:00 AM']")
     private WebElement ScheduleTime;
     @FindBy(xpath = "(//button[normalize-space(text())='Schedule Post'])[2]")
     private WebElement SchedulePostButton;
