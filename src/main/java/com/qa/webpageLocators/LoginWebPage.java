@@ -66,7 +66,7 @@ public class LoginWebPage extends BaseWebPage{
     private WebElement TodayButton;
     @FindBy(xpath = "//input[@type='time']")
     private WebElement Timertxtbox;
-    @FindBy(xpath = "//button[normalize-space(text())='7:00 PM']")
+    @FindBy(xpath = "//button[normalize-space(text())='12:00 PM']")
     private WebElement ScheduleTime;
     @FindBy(xpath = "(//button[normalize-space(text())='Schedule Post'])[2]")
     private WebElement SchedulePostButton;
@@ -113,8 +113,8 @@ public class LoginWebPage extends BaseWebPage{
         click(ScheduleButton);
         waitforelement(TodayButton,10);
         click(TodayButton);
-        type(Timertxtbox,time);
-        //click(ScheduleTime);
+        //type(Timertxtbox,time);
+        click(ScheduleTime);
         waitforelement(SchedulePostButton);
         click(SchedulePostButton);
         waitforelement(ToastMessage,10);
@@ -133,11 +133,11 @@ public class LoginWebPage extends BaseWebPage{
         click(ScheduleButton);
         waitforelement(TodayButton,10);
         click(TodayButton);
-        type(Timertxtbox,time);
+        //type(Timertxtbox,time);
         //click(ScheduleTime);
         waitforelement(SchedulePostButton);
         //captureScreenShot("twitterpost");
-        //click(ScheduleTime);
+        click(ScheduleTime);
         click(SchedulePostButton);
         waitforelement(ToastMessage,10);
         Assert.assertEquals(ToastMessage.getText(),"Your post has been scheduled successfully!");
@@ -155,8 +155,8 @@ public class LoginWebPage extends BaseWebPage{
         click(ScheduleButton);
         waitforelement(TodayButton,10);
         click(TodayButton);
-        type(Timertxtbox,time);
-        //click(ScheduleTime);
+        //type(Timertxtbox,time);
+        click(ScheduleTime);
         waitforelement(SchedulePostButton);
         click(SchedulePostButton);
         waitforelement(ToastMessage,10);
@@ -189,9 +189,9 @@ public class LoginWebPage extends BaseWebPage{
         wait.until(ExpectedConditions.elementToBeClickable(randomButton)).click();
         LOGGER.info("Using Magic post "+randomButton);
         System.out.println("Using Magic post "+randomButton);
-       waitforelement(Magiclbl,20);
-       waitforelement(PublishButton,25);
-       click(PublishButton,10);
+       waitforelement(Magiclbl,30);
+       waitforelement(PublishButton,30);
+       click(PublishButton,15);
        waitforelement(ToastMessage,10);
        Assert.assertEquals(ToastMessage.getText(),"Your post has been published successfully!");
        LOGGER.info(ToastMessage.getText());
