@@ -57,7 +57,7 @@ public class LoginWebPage extends BaseWebPage{
     private WebElement twitterButton;
     @FindBy(xpath = "//button[normalize-space(text())='LinkedIn']")
     private WebElement linkedinButton;
-    @FindBy(xpath = "//*[normalize-space(text())='Publish Now']")
+    @FindBy(xpath = "//*[contains(text(),'Publish Now')]")
     private WebElement PublishButton;
     @FindBy(xpath = "//button[normalize-space(text())='Schedule Post']")
     private WebElement ScheduleButton;
