@@ -43,7 +43,7 @@ Feature: Login into Rapidscoop Application
     Then Create schedule post in twitter and linkedin
     And I close my web browser
 
-  @Login1
+  @Login
   Scenario: Create Magic post from existing article
     Given User login into Rapidscoop Web Application
     Then Create Magic post
