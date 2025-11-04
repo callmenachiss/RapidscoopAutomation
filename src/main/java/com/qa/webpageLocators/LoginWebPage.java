@@ -195,7 +195,7 @@ public class LoginWebPage extends BaseWebPage{
        }
        waitforelement(PublishButton,30);
        click(PublishButton,40);
-       waitforelement(ToastMessage,10);
+       waitforelement(ToastMessage,20);
        Assert.assertEquals(ToastMessage.getText(),"Your post has been published successfully!");
        LOGGER.info(ToastMessage.getText());
     }
