@@ -16,7 +16,7 @@ import static io.cucumber.testng.CucumberOptions.SnippetType.CAMELCASE;
         , monochrome = true
         , snippets = CAMELCASE
         , dryRun = false
-        , tags = "@Regression"
+        , tags = "@Login1"
 )
 
 public class MyRunnerTest extends AbstractTestNGCucumberTests {

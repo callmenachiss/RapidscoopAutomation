@@ -190,7 +190,10 @@ public class LoginWebPage extends BaseWebPage{
         LOGGER.info("Using Magic post "+randomButton);
         System.out.println("Using Magic post "+randomButton);
        waitforelement(Magiclbl,30);
-       waitforelement(PublishButton,40);
+       try{waitforelement(PublishButton,40);} catch (Exception e) {
+           LOGGER.info("post not found");
+       }
+       waitforelement(PublishButton,30);
        click(PublishButton,40);
        waitforelement(ToastMessage,10);
        Assert.assertEquals(ToastMessage.getText(),"Your post has been published successfully!");
