@@ -2,7 +2,7 @@
 
 Feature: Login into Rapidscoop Application
 
-  @Login
+  @Login1
   Scenario: Login to Web Application
     Given User login into Rapidscoop Web Application
     And I close my web browser
